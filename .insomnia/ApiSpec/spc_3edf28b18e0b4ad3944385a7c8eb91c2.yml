@@ -1,0 +1,114 @@
+_id: spc_3edf28b18e0b4ad3944385a7c8eb91c2
+type: ApiSpec
+parentId: wrk_108c0fddc3854c91b13070d3b1801d8c
+modified: 1630398203729
+created: 1629954768541
+fileName: Users API
+contents: |-2
+    openapi: "3.0.0"
+    info:
+      description: "This is a basic user API server."
+      version: "0.9.0"
+      title: "Users API"
+    servers:
+      - url: "https://users-api-uxngcvgmwq-uc.a.run.app"
+        description: "Main server, running on Google Cloud Run"
+    paths:
+      /users:
+        get:
+          summary: "Get all users"
+          responses:
+            "200":
+              description: "200 OK, all users"
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Users"
+        put:
+          summary: "Add a new user"
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+          responses:
+            "200":
+              description: "200 OK, user"
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/User"
+            "400":
+              description: "400, name required"
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+      /users/{id}:
+        get:
+          summary: "Get user"
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: "id (uuid) of user to get"
+          responses:
+            "200":
+              description: "200 OK, user"
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/User"
+            "404":
+              description: "404, User not found"
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+        delete:
+          summary: "Delete a user"
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: "id (uuid) of user to get"
+          responses:
+            "204":
+              description: "204 OK, no content"
+            "404":
+              description: "404, User not found"
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+    components:
+      schemas:
+        Users:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+        User:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+contentType: yaml

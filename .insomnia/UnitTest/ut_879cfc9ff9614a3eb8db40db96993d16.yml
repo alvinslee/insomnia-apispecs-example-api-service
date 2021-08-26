@@ -1,0 +1,11 @@
+_id: ut_879cfc9ff9614a3eb8db40db96993d16
+type: UnitTest
+parentId: uts_774aefd6d5e24feead3574a2b4094069
+modified: 1630395680863
+created: 1629956782834
+requestId: req_fad43862d97d426bb46e2c15492a5889
+name: Create user without name returns 400 with message
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(400);
+  expect(response1.data).to.equal('Name is required.');

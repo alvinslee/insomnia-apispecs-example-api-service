@@ -1,0 +1,10 @@
+_id: ut_e3285fc16b6b49adb0c226621f7f47b2
+type: UnitTest
+parentId: uts_774aefd6d5e24feead3574a2b4094069
+modified: 1629956750172
+created: 1629956742880
+requestId: req_5f4aaae7ad8548b3acf07b951e328646
+name: Delete user returns 204
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(204);

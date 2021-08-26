@@ -1,0 +1,11 @@
+_id: ut_85578b8587444fb78bff5d6b885da9aa
+type: UnitTest
+parentId: uts_774aefd6d5e24feead3574a2b4094069
+modified: 1630395679379
+created: 1629956761164
+requestId: req_0d6729aceae9488b81019aafb53e16ca
+name: Delete non-existing user returns 404 with message
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(404);
+  expect(response1.data).to.equal('User not found.');

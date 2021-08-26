@@ -1,0 +1,23 @@
+_id: req_c68b73678382405daee32e294e3c4282
+type: Request
+parentId: wrk_108c0fddc3854c91b13070d3b1801d8c
+modified: 1630394491615
+created: 1629954865016
+url: "{{BASE_URL}}/users/{% response 'body',
+  'req_7b750af33c5b4c5cbfa43334991d945f',
+  'b64::JFsoQC5sZW5ndGgtMSldWydpZCdd::46b', 'when-expired', 60 %}"
+name: Get existing user
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1629955329494
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

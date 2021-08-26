@@ -1,0 +1,13 @@
+_id: ut_4808fd94496346929c9282c2e7472ce4
+type: UnitTest
+parentId: uts_774aefd6d5e24feead3574a2b4094069
+modified: 1629956925452
+created: 1629956511653
+requestId: req_c379539883d0408f95f7d6328a90ef3e
+name: Create user returns 201 with user info
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);
+  const body = JSON.parse(response1.data);
+  expect(body.id).to.exist;
+  expect(body.name).to.exist;

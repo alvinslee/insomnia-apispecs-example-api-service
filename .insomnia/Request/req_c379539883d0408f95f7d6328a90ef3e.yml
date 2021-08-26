@@ -1,0 +1,29 @@
+_id: req_c379539883d0408f95f7d6328a90ef3e
+type: Request
+parentId: wrk_108c0fddc3854c91b13070d3b1801d8c
+modified: 1630394496157
+created: 1629955105155
+url: "{{BASE_URL}}/users"
+name: Create user
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"name": "{% faker 'name', '', '', '', '', '', '', '', '', '', '', 'firstName', '', '', '', '', 'en' %} {% faker 'name', '', '', '', '', '', '', '', '', '', '', 'lastName', '', '', '', '', 'en' %}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_408d3763460e4d3599ed269ee1046685
+authentication: {}
+metaSortKey: -1629955311494.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

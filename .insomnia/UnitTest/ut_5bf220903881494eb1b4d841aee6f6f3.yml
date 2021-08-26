@@ -1,0 +1,10 @@
+_id: ut_5bf220903881494eb1b4d841aee6f6f3
+type: UnitTest
+parentId: uts_774aefd6d5e24feead3574a2b4094069
+modified: 1629956464803
+created: 1629956409199
+requestId: req_7b750af33c5b4c5cbfa43334991d945f
+name: Get all users returns 200
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

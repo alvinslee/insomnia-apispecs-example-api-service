@@ -1,0 +1,15 @@
+{
+  "name": "insomnia-example-api-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": "git@github.com:alvinslee/insomnia-apispecs-example-api-service.git",
+  "author": "Alvin Lee <alvin@ootbdev.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  }
+}

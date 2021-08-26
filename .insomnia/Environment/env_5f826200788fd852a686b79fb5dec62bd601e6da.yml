@@ -1,0 +1,15 @@
+_id: env_5f826200788fd852a686b79fb5dec62bd601e6da
+type: Environment
+parentId: wrk_108c0fddc3854c91b13070d3b1801d8c
+modified: 1629954809732
+created: 1629954768738
+name: Base Environment
+data:
+  base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
+  BASE_URL: https://users-api-uxngcvgmwq-uc.a.run.app
+dataPropertyOrder:
+  "&":
+    - BASE_URL
+color: null
+isPrivate: false
+metaSortKey: 1629954768738

@@ -1,0 +1,11 @@
+_id: ut_56634fdcb89b4724a0414e8872efc1bc
+type: UnitTest
+parentId: uts_774aefd6d5e24feead3574a2b4094069
+modified: 1630395676019
+created: 1629956485909
+requestId: req_b410d0eb437a4fd98d80c5c2b3603a65
+name: Get non-existing user returns 404 with message
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(404);
+  expect(response1.data).to.equal('User not found.');
